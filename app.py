@@ -25,9 +25,33 @@ def choose_location(choice): #call the story chosen by user input
     else:
         print("Invalid choice. Please select a number between 1 and 3.")    
 
+
+def user_inputs(word_list):
+    inputs = {}
+    for word, prompt in word_list.items():
+        user_input = input(prompt)
+        inputs[word] = user_input
+    return inputs
+
+
+word_list = { #The different types of words the player inputs
+    'person': "Enter a person's name: ",
+    'title': "Enter a title for the person: ",
+    'object': "Enter the name of a mysterious object: ",
+    'adjective': "Enter an adjective: ",
+    'creature': "Enter the name of a creature: ",
+    'country': "Enter the name of a country: "
+}
+
 #================ The 3 main stories ================#
 def story_forest():
-    print("Welcome to the Desert!")
+    inputs = user_inputs(word_list)
+
+    story = f"In a distant forest, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}. " \
+            f"It granted them incredible {inputs['adjective']} powers and transported them to a magical woodland. " \
+            f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']} " \
+            f"and became a hero of {inputs['country']}."
+    print({story})
 def story_desert():
     print("Welcome to the Desert!")
 def story_ocean():
@@ -48,3 +72,4 @@ def validate_input(prompt, input_type):
 introduction()
 display_location() 
 #user_inputs()
+
