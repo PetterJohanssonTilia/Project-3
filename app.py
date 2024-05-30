@@ -4,16 +4,18 @@
 def introduction(): #The first message that appears when you run the program
     print ("This is a madlibs game, You'll be asked to input words and your words will help shape the story")
     print("There's 3 storys to choose from.") 
-    print ("Depending on which location you'll pick youll get a different story")
+    print ("Depending on which location you'll pick you'll get a different story")
 
 
 def display_location(): #Display 3 locations, user input what location they want
+    global choice
     print("Where do you want your story to take place?")
     print("1. Forest")
     print("2. Desert")
     print("3. Ocean")
-    choice = validate_input("Enter the number of the story you want to play: ", "number")
-    choose_location(choice)
+    choice = validate_input("Enter the number for the story you want to play: ", "number")
+    locations = {1: "Forest", 2: "Desert", 3: "Ocean"}
+    print(f"You chose {locations[choice]}")
 
 def choose_location(choice): #call the story chosen by user input
     if choice == 1:
@@ -85,6 +87,7 @@ def story_ocean():
 
 #Start
 introduction()
-display_location() 
+display_location()
+choose_location(choice)
 #user_inputs()
 
