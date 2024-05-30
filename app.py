@@ -13,7 +13,7 @@ def display_location(): #Display 3 locations, user input what location they want
     print("1. Forest")
     print("2. Desert")
     print("3. Ocean")
-    choice = validate_input("Enter the number for the story you want to see: ", "number")
+    choice = validate_input("Enter the number for the story you want to see: ", "number", [1, 2, 3])
     locations = {1: "Forest", 2: "Desert", 3: "Ocean"}
     print(f"You chose {locations[choice]}")
 
@@ -23,7 +23,7 @@ def display_goodevil(): #Display 2 options, the previous user inputs(choice) fil
     print("Do you wish for the main character to turn good or evil?")
     print("1. Good")
     print("2. Evil")
-    choicegoodevil = validate_input("Enter the number for the story you want to see: ", "number")
+    choicegoodevil = validate_input("Enter the number for the story you want to see: ", "number", [1, 2])
     goodevil = {1: "Good", 2: "Evil"}
     print(f"You chose {goodevil[choicegoodevil]}")
 
@@ -43,7 +43,7 @@ def choose_goodevil(choicegoodevil): #call the good/evil-story chosen by user in
     elif choice == 2:
         story_evil(inputs)
     else:
-        print("Invalid choice. Please select a number between 1 and 3.")    
+        print("Invalid choice. Please select a number between 1 and 2.")    
 
 
 def user_inputs(word_list):
@@ -78,15 +78,19 @@ word_list = { #The different types of words the player inputs with the prompts t
 }
 
 #Validates if its string or interger
-def validate_input(prompt, input_type):
+def validate_input(prompt, input_type, choices=None):
     while True:
         user_input = input(prompt)
         if input_type == "number" and user_input.isdigit():
-            return int(user_input)
+            user_input = int(user_input) #User input is now an integer
+            if choices is not None and user_input not in choices: #The user chose a number but it's not in the choices
+                print("Invalid input. Please enter a valid choice.")
+            else:
+                return user_input #Returns the now integer input
         elif input_type == "letter" and user_input.isalpha():
             return user_input
         else:
-            print("Invalid input. Please enter a valid", input_type + ".")
+            print("Invalid input. Please enter a valid", input_type + ".") #What's entered was an integer
 
 
 
