@@ -29,7 +29,7 @@ def choose_location(choice): #call the story chosen by user input
 def user_inputs(word_list):
     inputs = {}
     for word, prompt in word_list.items():
-        user_input = input(prompt)
+        user_input = validate_input(prompt, "letter")
         inputs[word] = user_input
     return inputs
 
@@ -43,20 +43,6 @@ word_list = { #The different types of words the player inputs
     'country': "Enter the name of a country: "
 }
 
-#================ The 3 main stories ================#
-def story_forest():
-    inputs = user_inputs(word_list)
-
-    story = f"In a distant forest, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}. " \
-            f"It granted them incredible {inputs['adjective']} powers and transported them to a magical woodland. " \
-            f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']} " \
-            f"and became a hero of {inputs['country']}."
-    print({story})
-def story_desert():
-    print("Welcome to the Desert!")
-def story_ocean():
-    print("Welcome to the Ocean!")
-
 #Validates if its string or interger
 def validate_input(prompt, input_type):
     while True:
@@ -67,6 +53,35 @@ def validate_input(prompt, input_type):
             return user_input
         else:
             print("Invalid input. Please enter a valid", input_type + ".")
+
+
+#================ The 3 main stories ================#
+def story_forest():
+    inputs = user_inputs(word_list)
+
+
+    print(f"In a distant forest, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
+    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical woodland.")
+    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f"and became a hero of {inputs['country']}.")
+    
+
+def story_desert():
+    inputs = user_inputs(word_list)
+
+    print(f" In a distant desert, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
+    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical oasis.")
+    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f"and became a hero of {inputs['country']}.")
+    
+
+def story_ocean():
+    inputs = user_inputs(word_list)
+
+    print(f"In a distant ocean, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
+    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical underwater city.")
+    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f"and became a hero of {inputs['country']}.")
 
 #Start
 introduction()
