@@ -7,7 +7,7 @@ def introduction(): #The first message that appears when you run the program
     print ("Depending on which location you'll pick youll get a different story")
 
 
-def display_location(): #Pick between 3 locations for 3 different stories
+def display_location(): #Display 3 locations, user input what location they want
     print("Where do you want your story to take place?")
     print("1. Forest")
     print("2. Desert")
@@ -15,7 +15,7 @@ def display_location(): #Pick between 3 locations for 3 different stories
     choice = validate_input("Enter the number of the story you want to play: ", "number")
     choose_location(choice)
 
-def choose_location(choice): #
+def choose_location(choice): #call the story chosen by user input
     if choice == 1:
         story_forest()
     elif choice == 2:
