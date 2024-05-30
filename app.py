@@ -35,27 +35,6 @@ def user_inputs(word_list):
         inputs[word] = user_input
     return inputs
 
-
-word_list = { #The different types of words the player inputs
-    'person': "Enter a person's name: ",
-    'title': "Enter a title for the person: ",
-    'object': "Enter the name of a mysterious object: ",
-    'adjective': "Enter an adjective: ",
-    'creature': "Enter the name of a creature: ",
-    'country': "Enter the name of a country: "
-}
-
-#Validates if its string or interger
-def validate_input(prompt, input_type):
-    while True:
-        user_input = input(prompt)
-        if input_type == "number" and user_input.isdigit():
-            return int(user_input)
-        elif input_type == "letter" and user_input.isalpha():
-            return user_input
-        else:
-            print("Invalid input. Please enter a valid", input_type + ".")
-
 #Gives colors to the users input
 def colorize(text, color):
     colors = {
@@ -70,15 +49,36 @@ def colorize(text, color):
     }
     return colors.get(color, '') + text + colors['default']
 
+word_list = { #The different types of words the player inputs with the prompts to tell the player what to input
+    'person': f"Enter a {colorize("person's name", 'red')}:",
+    'title': f"Enter a {colorize("title", 'blue')} for the person:",
+    'object': f"Enter the name of a {colorize("mysterious object", 'yellow')}:",
+    'adjective': f"Enter an {colorize("adjective", 'magenta')}:",
+    'creature': f"Enter the name of a {colorize("creature", 'cyan')}:",
+    'country': f"Enter the name of a {colorize("country", 'green')}: "
+}
+
+#Validates if its string or interger
+def validate_input(prompt, input_type):
+    while True:
+        user_input = input(prompt)
+        if input_type == "number" and user_input.isdigit():
+            return int(user_input)
+        elif input_type == "letter" and user_input.isalpha():
+            return user_input
+        else:
+            print("Invalid input. Please enter a valid", input_type + ".")
+
+
+
 #================ The 3 main stories ================#
 def story_forest():
     inputs = user_inputs(word_list)
 
-
     print(f"In a distant forest, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical woodland.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {inputs['country']}.")
+    print(f"and became a hero of {colorize("country", 'green')}.")
     
 
 def story_desert():
@@ -87,7 +87,7 @@ def story_desert():
     print(f" In a distant desert, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical oasis.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {inputs['country']}.")
+    print(f"and became a hero of {colorize("country", 'green')}.")
     
 
 def story_ocean():
@@ -96,7 +96,7 @@ def story_ocean():
     print(f"In a distant ocean, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical underwater city.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {inputs['country']}.")
+    print(f"and became a hero of {colorize("country", 'green')}.")
 
 #Start
 introduction()
