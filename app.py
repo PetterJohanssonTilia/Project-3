@@ -39,14 +39,15 @@ def choose_location(choice): #call the location-story chosen by user input
 
 def choose_goodevil(choicegoodevil): #call the good/evil-story chosen by user input
     if choice == 1:
-        story_good()
+        story_good(inputs)
     elif choice == 2:
-        story_evil()
+        story_evil(inputs)
     else:
         print("Invalid choice. Please select a number between 1 and 3.")    
 
 
 def user_inputs(word_list):
+    global inputs
     inputs = {}
     for word, prompt in word_list.items():
         user_input = validate_input(prompt, "letter")
@@ -117,17 +118,15 @@ def story_ocean():
     print(f"and became a hero of {colorize("country", 'green')}.")
 
 #================ The 2 good/evil stories ================#
-def story_good():
-    inputs = user_inputs(word_list)
+def story_good(inputs):
 
     print(f"a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} stumbled upon a wondrous {colorize(inputs['object'], 'yellow')}.")
     print(f"It bestowed upon them noble and {colorize(inputs['adjective'], 'magenta')} powers and transported them to an enchanting underwater utopia.")
     print(f"There, they encountered a {colorize(inputs['creature'], 'cyan')} in distress. With courage and compassion, {colorize(inputs['person'], 'red')}")
     print(f"aided the {colorize(inputs['creature'], 'cyan')} and restored harmony to the underwater realm.")
 
-def story_evil():
-    inputs = user_inputs(word_list)
-
+def story_evil(inputs):
+    
     print(f"{colorize(inputs['title'], 'blue')} known as {colorize(inputs['person'], 'red')} stumbled upon a malevolent {colorize(inputs['object'], 'yellow')}.")
     print(f"It bestowed upon them dark and {colorize(inputs['adjective'], 'magenta')} powers and whisked them away to a cursed underwater fortress.")
     print(f"There, they encountered a {colorize(inputs['creature'], 'cyan')} in distress. {colorize(inputs['person'], 'red')}")
