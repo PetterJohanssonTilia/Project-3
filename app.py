@@ -56,33 +56,46 @@ def validate_input(prompt, input_type):
         else:
             print("Invalid input. Please enter a valid", input_type + ".")
 
+#Gives colors to the users input
+def colorize(text, color):
+    colors = {
+        'red': '\033[91m',
+        'green': '\033[92m',
+        'yellow': '\033[93m',
+        'blue': '\033[94m',
+        'magenta': '\033[95m',
+        'cyan': '\033[96m',
+        'white': '\033[97m',
+        'default': '\033[0m'
+    }
+    return colors.get(color, '') + text + colors['default']
 
 #================ The 3 main stories ================#
 def story_forest():
     inputs = user_inputs(word_list)
 
 
-    print(f"In a distant forest, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
-    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical woodland.")
-    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f"In a distant forest, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
+    print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical woodland.")
+    print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
     print(f"and became a hero of {inputs['country']}.")
     
 
 def story_desert():
     inputs = user_inputs(word_list)
 
-    print(f" In a distant desert, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
-    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical oasis.")
-    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f" In a distant desert, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
+    print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical oasis.")
+    print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
     print(f"and became a hero of {inputs['country']}.")
     
 
 def story_ocean():
     inputs = user_inputs(word_list)
 
-    print(f"In a distant ocean, a {inputs['title']} named {inputs['person']} found a mysterious {inputs['object']}.")
-    print(f"It granted them incredible {inputs['adjective']} powers and transported them to a magical underwater city.")
-    print(f"There, they met a {inputs['creature']} in need. With bravery, {inputs['person']} helped the {inputs['creature']}")
+    print(f"In a distant ocean, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
+    print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical underwater city.")
+    print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
     print(f"and became a hero of {inputs['country']}.")
 
 #Start
