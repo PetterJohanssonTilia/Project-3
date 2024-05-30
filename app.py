@@ -13,17 +13,35 @@ def display_location(): #Display 3 locations, user input what location they want
     print("1. Forest")
     print("2. Desert")
     print("3. Ocean")
-    choice = validate_input("Enter the number for the story you want to play: ", "number")
+    choice = validate_input("Enter the number for the story you want to see: ", "number")
     locations = {1: "Forest", 2: "Desert", 3: "Ocean"}
     print(f"You chose {locations[choice]}")
 
-def choose_location(choice): #call the story chosen by user input
+
+def display_goodevil(): #Display 2 options, the previous user inputs(choice) fills the words this time
+    global choicegoodevil
+    print("Do you wish for the main character to turn good or evil?")
+    print("1. Good")
+    print("2. Evil")
+    choicegoodevil = validate_input("Enter the number for the story you want to see: ", "number")
+    goodevil = {1: "Good", 2: "Evil"}
+    print(f"You chose {goodevil[choicegoodevil]}")
+
+def choose_location(choice): #call the location-story chosen by user input
     if choice == 1:
         story_forest()
     elif choice == 2:
         story_desert()
     elif choice == 3:
         story_ocean()
+    else:
+        print("Invalid choice. Please select a number between 1 and 3.")    
+
+def choose_goodevil(choicegoodevil): #call the good/evil-story chosen by user input
+    if choice == 1:
+        story_good()
+    elif choice == 2:
+        story_evil()
     else:
         print("Invalid choice. Please select a number between 1 and 3.")    
 
@@ -71,7 +89,7 @@ def validate_input(prompt, input_type):
 
 
 
-#================ The 3 main stories ================#
+#================ The 3 location stories ================#
 def story_forest():
     inputs = user_inputs(word_list)
 
@@ -98,9 +116,27 @@ def story_ocean():
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
     print(f"and became a hero of {colorize("country", 'green')}.")
 
-#Start
-introduction()
-display_location()
-choose_location(choice)
-#user_inputs()
+#================ The 2 good/evil stories ================#
+def story_good():
+    inputs = user_inputs(word_list)
+
+    print(f"a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} stumbled upon a wondrous {colorize(inputs['object'], 'yellow')}.")
+    print(f"It bestowed upon them noble and {colorize(inputs['adjective'], 'magenta')} powers and transported them to an enchanting underwater utopia.")
+    print(f"There, they encountered a {colorize(inputs['creature'], 'cyan')} in distress. With courage and compassion, {colorize(inputs['person'], 'red')}")
+    print(f"aided the {colorize(inputs['creature'], 'cyan')} and restored harmony to the underwater realm.")
+
+def story_evil():
+    inputs = user_inputs(word_list)
+
+    print(f"{colorize(inputs['title'], 'blue')} known as {colorize(inputs['person'], 'red')} stumbled upon a malevolent {colorize(inputs['object'], 'yellow')}.")
+    print(f"It bestowed upon them dark and {colorize(inputs['adjective'], 'magenta')} powers and whisked them away to a cursed underwater fortress.")
+    print(f"There, they encountered a {colorize(inputs['creature'], 'cyan')} in distress. {colorize(inputs['person'], 'red')}")
+    print(f"exploited the situation for their own gain, using the {colorize(inputs['creature'], 'cyan')} to further their wicked agenda.")
+#================ Start ================
+introduction() #Introduction text
+display_location() #Displays the location choices
+choose_location(choice) #Calls to the chosen locations story
+display_goodevil() #Displays the good and evil choice
+choose_goodevil(choicegoodevil) #Calls the chosen good/evil story
+
 
