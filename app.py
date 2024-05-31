@@ -119,7 +119,7 @@ def story_forest():
     print(f"In a distant forest, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical woodland.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {colorize("country", 'green')}.")
+    print(f"and became a hero of {colorize(inputs['country'], 'green')}.")
     
 
 def story_desert():
@@ -128,7 +128,7 @@ def story_desert():
     print(f" In a distant desert, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical oasis.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {colorize("country", 'green')}.")
+    print(f"and became a hero of {colorize(inputs['country'], 'green')}.")
     
 
 def story_ocean():
@@ -137,7 +137,7 @@ def story_ocean():
     print(f"In a distant ocean, a {colorize(inputs['title'], 'blue')} named {colorize(inputs['person'], 'red')} found a mysterious {colorize(inputs['object'], 'yellow')}.")
     print(f"It granted them incredible {colorize(inputs['adjective'], 'magenta')} powers and transported them to a magical underwater city.")
     print(f"There, they met a {colorize(inputs['creature'], 'cyan')} in need. With bravery, {colorize(inputs['person'], 'red')} helped the {colorize(inputs['creature'], 'cyan')}")
-    print(f"and became a hero of {colorize("country", 'green')}.")
+    print(f"and became a hero of {colorize(inputs['country'], 'green')}.")
 
 #================ The 2 good/evil stories ================#
 def story_good(inputs):
