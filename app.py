@@ -2,9 +2,27 @@
 #================ Main Functions ================#
 
 def introduction(): #The first message that appears when you run the program
+    print ("================================================================================================")
     print ("This is a madlibs game, You'll be asked to input words and your words will help shape the story")
     print("There's 3 storys to choose from.") 
     print ("Depending on which location you'll pick you'll get a different story")
+
+def endmessage(): #The last message before you quit/restart
+    global choicerestart
+    print("Do you wish to play again?")
+    print("1. Yes")
+    print("2. No")
+    choicerestart = validate_input("Do you want to play again?", "number", [1, 2])
+    restart = {1: "Yes", 2: "No"}
+    print(f"You chose {restart[choicerestart]}") #Tell the user choice they've picked
+    
+    #Return true or false if the player wants to play again or not
+    if choicerestart == 2: 
+        print("Thanks for playing! Bye!")
+        return False
+    elif choicerestart == 1:
+        print("Let's play again!")
+        return True
 
 
 def display_location(): #Display 3 locations, user input what location they want
@@ -137,10 +155,13 @@ def story_evil(inputs):
     print(f"exploited the situation for their own gain, using the {colorize(inputs['creature'], 'cyan')} to further their wicked agenda.")
 
 #================ Start of script ================
-introduction() #Introduction text
-display_location() #Displays the location choices
-choose_location(choice) #Calls the chosen locations story
-display_goodevil() #Displays the good and evil choices
-choose_goodevil(choicegoodevil) #Calls the chosen good/evil story
+while True:
+    introduction() #Introduction text
+    display_location() #Displays the location choices
+    choose_location(choice) #Calls the chosen locations story
+    display_goodevil() #Displays the good and evil choices
+    choose_goodevil(choicegoodevil) #Calls the chosen good/evil story
 
+    if not endmessage():  #calls the endmessage and checks for true/false
+        break
 
