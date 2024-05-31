@@ -13,7 +13,7 @@ def display_location(): #Display 3 locations, user input what location they want
     print("1. Forest")
     print("2. Desert")
     print("3. Ocean")
-    choice = validate_input("Enter the number for the story you want to see:", "number", [1, 2, 3]) #Validates its a number between 1-3
+    choice = validate_input("Enter the number for the story you want to see: ", "number", [1, 2, 3]) #Validates its a number between 1-3
     locations = {1: "Forest", 2: "Desert", 3: "Ocean"}
     print(f"You chose {locations[choice]}") #Tell the user what location they've picked
 
