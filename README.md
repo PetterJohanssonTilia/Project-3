@@ -1,107 +1,81 @@
-<h1>What Weighs More?</h1>
-This is a Javascript portfolio-project. <br>
-The website is designed to be a relaxing game of guessing and estimating weight of objects. The website offers a clear and simple game with visuals to keep the player engaged.<br><br>
-
-The design is cartoonish and simple to allow for the animations in the background to shine more, creating a calm and enjoyable game.
+<h1>Madlibs Python</h1>
+This is a python portfolio-project. <br>
+The application is designed to be a game of Madlibs with a branching story.<br>
 
 ## Table of Contents
 
-1.  <details open>
-      <summary><a href="#ux">UX</a></summary>
-      <ul>
-      <li><details>
-      <summary><a href="#goals">Goals</a></summary>
+1. <details open>
+     
+   <summary><a href="#goals">Goals</a></summary>
 
-    - [Visitor Goals](#visitor-goals)
-    - [Business Goals](#business-goals)
-    - [User Stories](#user-stories)
-      </details>
-      </li>
+   - [Visitor Goals](#visitor-goals)
+   - [Business Goals](#business-goals)
+   - [User Stories](#user-stories)
+   </details>
 
-        <li><details>
-        <summary><a href="#visual-design">Visual Design<a><summary>
+2. <details open>
 
-    - [Wireframes](#wireframes)
-    - [Fonts](#fonts)
-    - [Icons](#icons)
-    - [Colors](#colors)
-    - [Images](#images)
-    - [Styling](#styling)
-    </details></li></ul>
+   <summary><a href="#visual-design">Visual Design<a></summary>
 
+   - [Colors](#colors)
+
+   </details>
+
+3. <details open>
+     <summary><a href="#features">Features</a></summary>
+
+   - [Flow chart](#flow-chart)
+   - [Branching story](#branching-story)
+   - [Input words](#input-words)
+
+4. <details open>
+    <summary><a href="#technologies-used">Technologies Used</a></summary>
+
+   - [Languages](#languages)
+   - [Platforms](#platforms)
+   - [Other Tools](#other-tools)
+
+   </details>
+
+5. <details open>
+    <summary><a href="#testing">Testing</a></summary>
+
+    <details><summary><a href="#methods">Methods</a></summary>
+    
+    - [Validation](#validation)
+    - [General Testing](#general-testing)
+    - [Mobile Testing](#mobile-testing)
+    - [Desktop Testing](#desktop-testing)
     </details>
-
-2.  <details open>
-      <summary><a href="#features">Features</a></summary>
-      <ul>
-      <li><details>
-      <summary><a href="#page-elements">Page Elements</a></summary>
-
-    - [All Pages](#all-pages)
-    - [Index Page](#index-page)
-    - [Game Page](#gallery-page)
-        </details></li>
-          <li><details>
-          <summary><a href="#additional-features">Additional Features</a></summary>
-
-        </details></li>
-          <li><details>
-          <summary><a href="#feature-ideas">Feature Ideas</a></summary>
-          - [Basic](#basic)
-          - [Content](#content)
-          </details></li>
-          </ul>
-      </details>
-
-3.  <details open>
-      <summary><a href="#technologies-used">Technologies Used</a></summary>
-
-    - [Languages](#languages)
-    - [Libraries](#libraries)
-    - [Platforms](#platforms)
-    - [Other Tools](#other-tools)
-
-    </details>
-
-4.  <details open>
-      <summary><a href="#testing">Testing</a></summary>
-      <ul>
-      <li><details>
-      <summary><a href="#methods">Methods</a></summary>
-      - [Validation](#validation)
-      - [General Testing](#general-testing)
-      - [Mobile Testing](#mobile-testing)
-      - [Desktop Testing](#desktop-testing)
-      </details></li>
-      <li><details>
-      <summary><a href="#bugs">Bugs</a></summary>
+      
+    <details><summary><a href="#bugs">Bugs</a></summary>
+    
     - [Known Bugs](#known-bugs)
     - [Fixed Bugs](#fixed-bugs)
-    </details></li>
-    </ul>
     </details>
+   </details>
 
-5.  <details open>
-      <summary><a href="#deployment">Deployment</a></summary>
-      <ul>
-      <li><details>
-      <summary><a href="#local-deployment">Local Deployment</a></summary>
-      - [Local Preparation](#local-preparation)
-      - [Local Instructions](#local-instructions)
-      </details></li>
-      <li><details>
-      <summary><a href="#github-deployment">Github Deployment</a></summary>
-      - [Github Preparation](#github-preparation)
-      - [Github Instructions](#github-instructions)
-      </details></li>
-      </ul>
-    </details>
+6. <details open>
+     <summary><a href="#deployment">Deployment</a></summary>
+     <details>
+     <summary><a href="#local-deployment">Local Deployment</a></summary>
+     
+     - [Local Preparation](#local-preparation)
+     - [Local Instructions](#local-instructions)
+     </details><details>
+     <summary><a href="#github-deployment">Github Deployment</a></summary>
+     
+     - [Github Preparation](#github-preparation)
+     - [Github Instructions](#github-instructions)
+     </details>
+   </details>
 
-6.  <details open>
-      <summary><a href="#credit-and-contact">Credit and Contact</a></summary>
-      - [Content](#content)
-      - [Contact](#contact)
-    </details>
+7. <details open>
+     <summary><a href="#credit-and-contact">Credit and Contact</a></summary>
+     
+     - [Content](#content)
+     - [Contact](#contact)
+   </details>
 
 ---
 
@@ -111,146 +85,79 @@ The design is cartoonish and simple to allow for the animations in the backgroun
 
 ### Visitor Goals
 
-The target audience for What Weighs More are:
+The target audience for Madlib Python are:
 
-- People who want to play a relaxing game.
-- People who want to see how good they are at estimating weight.
-- People who want to see their knowledge of random objects.
+- People who want to play a game where their choices matters.
+- People who want to see how creative they can be.
 
 User goals are:
 
-- Getting a relaxing experience.
-- Learning more about weight
-- Learning more about different objects
+- Getting an interactive story
+- Feeling that they can influence the story
+- Freedom to write what they want
 
-What weighs more fills these needs by:
+Madlibs Python fills these needs by:
 
-- Clearly stating the rules of the game
-- Showing the game front and center without distractions
-- Not having a leaderboard, time limit or limit of attempts to not make the user stressed
-- Making the website simple, allowing for a relaxing background animation
-- Having many different categories of objects in the game
-- Having objects of many different weight classes along with a multiplier to make it more challenging
+- Clearly explaining how the game works
+- Explaining what branching stories the user can choose from
+- Explaining when the user can input their own words
+- Clear error messages if the user gives the wrong input
+- Coloring the users inputs to show the user what they've contributed to the story
 
 ### User Stories
 
-1. As a user interested in relaxing games I'd like to be able to play without feeling any stress
-2. As a user I'd to see many different objects
-3. I'd Like to get a challenge and really test my guessing abilites
+1. As a user interested in creating a funny story
+2. As a user I'd like to see many different stories and outcomes
+3. I'd like to clearly know what I can't and what I can write
 
-## Visual Design
+# Visual Design
 
-### Wireframes
+## Colors
 
-Index</br>
-
-<img src="./assets/readme/wireframes/wireframeindex1.jpg" alt="Wireframes">
-Game</br>
-
-<img src="./assets/readme/wireframes/wireframegame1.jpg" alt="Wireframes">
-
-### Fonts
-
-- The primary font, <a href="https://fonts.google.com/specimen/Barlow+Condensed?query=barlow+con">[Barlow Condensed]</a> Is used in the games boxes and is used because it's calm and simple
-- The secondary font, which is actually used for the header is <a href="https://fonts.google.com/specimen/Imbue?query=imbue">Imbue</a> it looks elegant and fit very nicely with the dark background. It was chosen to contrast the other fonts making the player only read it once and then easily sort it out from the other text used in the game.
-
-### Colors
-
-<div align="center">
-  <img src="./assets/readme/colorhunt1.jpg" alt="Color Pallette">
-</div>
-
-- Colors found on <a href="https://colorhunt.co/palette/0a1d56492e8737b5b6f2f597">ColorHunt</a>
-- I wanted the site to look friendly, cartoonish and light hearted.
-- The primary color used is the deep blue. This is used to create a stark contrast with the colors of the other elements on the page, drawing the eyes and focus on them.
-- One accent color was chosen, the dark yellow, to give a feeling of "warning", reminiscing of a stop signal to showcase that this is a site of satirical complaints.
-- Text is primarily written in white to contrast on the bold color backgrounds of the primary and accent colors.
-
-### Images
-
-<div align="center">
-  <img src="./assets/readme/guessbox1.jpg" alt="Object images">
-</div>
-
-- All the objects images are found on <a href="https://pixabay.com/">pixabay</a>
-- I've chosen these pictures because they're all 2d vector graphics and match easily
-- The bubble picture is drawn by me
-
-### Styling
-
-- For this project I used grid to more easily put all the different elements in their correct places
-- I used animations to make the simple style look more interesting while playing
-
----
+The colors used all have their corresponding word they're connected to
+This increases the readabilty and makes it easier to spot what you as the user
+has contributed
 
 # Features
 
-## Page Elements
+## Functions
 
-### Header
+### Introduction
 
-<img src="./assets/readme/header1.jpg" alt="header">
+hello
 
-At the top of all pages to display the name of the game.
+### Display branches
 
-### Guess-boxes
+hello
 
-<img src="./assets/readme/guessbox1.jpg" alt="guessbox">
+### Choices
 
-These are displayed front and center with clear borders to clearly show the objects for the game.
+hello
 
-### Score-box
+### Inputs
 
-<img src="./assets/readme/score1.jpg" alt="score">
+hello
 
-The score box is displayed under the guess-boxes.
-and is animated to both jump and change color depending
-if you answer correct or false.
+### Validation
 
-### Attempts-box
-
-<img src="./assets/readme/attempts1.jpg" alt="score">
-
-The attempts-box is located under scorebox and displays the number of attempts you've made, each attempt is a click and this box is not animated to not bring out too many visuals.
-
-### Play-button
-
-<img src="./assets/readme/play1.jpg" alt="play">
-The play button is located on the front page and displayed clearly.
-It has a wider gap between itself and the text than the header and the text to seperate them more clearly.
-
-#### Footer
-
-<img src="./assets/readme/footer1.jpg" alt="Footer">
-
-- Located at the bottom of every page
-- Displays the author of the project
-- Changing shape for larger or smaller devices.
-
----
+hello
 
 # Feature-Ideas
 
+###
+
 ### Player feedback
 
-The Idea of the attempts-box, score-box and the bubbles in the background is to give the
-player feedback when playing. When you guess a bubble either appears or dissapears, the attempts-box changes its score and the score-box is animated to bounce and change color to grab the users attention and indicate a right or wrong guess.
+The Idea is the give the player simple instructions, and simple feedback when they've made an incorrect input
+
+visual feedback comes from the colors of the words from the player
 
 # Technologies Used
 
 ## Languages
 
-- [HTML]
-  - Page markup.
-- [CSS]
-  - Styling and animations
-- [Java-script]
-  - Interactivity
-
-## Libraries
-
-- [Google Fonts](https://fonts.google.com)
-  - Font Styles.
+- [Python]
+  - Functions and display.
 
 ## Platforms
 
@@ -261,12 +168,8 @@ player feedback when playing. When you guess a bubble either appears or dissapea
 
 ## Other Tools
 
-- [Figma](https://figma.com/)
-  - To create wireframes.
-- [Colorhunt](https://colorhunt.co/)
-  - Creating color pallettes.
-- [grid.layoutfit](https://grid.layoutit.com/)
-  - Create the grid layout
+- [Chatgpt](https://chat.openai.com/)
+  - To create the stories.
 
 ---
 
@@ -336,43 +239,38 @@ All links and anchors are working.
 
 ### Manual Testing
 
-- Testing done through playing the game
-- Checked the links to Twitter and Facebook in the footer.
+- Player experience tested by playing the game
+- Validation and functionality tested by giving the wrong inputs
 
 ### Mobile Testing
 
-- I tested the site personally on my Android device, going through the entire process, checking buttons, functions, checking out, etc. I was personally unable to test on iOS.
+- I tested the site personally on my Android device
 - The site was sent to friends and relatives for them to follow the same process. They have tested on their devices, including iOS.
-- Chrome was utilised to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
 
-- the majority of testing occurred on Chrome and Edge.
+- the majority of testing occurred on VSCO.
 - The site was tested by friends and relatives on numerous desktop devices.
-- Internet Explorer was not tested and the site was not developed with it .in mind as support for the browser is gradually being dropped.
 
 ### Testing User Stories
 
-|     |                                           User story                                            |                                                                                                              Answer to user story |
-| --- | :---------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------: |
-| 1   | "As a user interested in relaxing games I'd like to be able to play without feeling any stress" |                                The game features no attempts limit or time limit. This makes the game more suited for casual play |
-| 2   |                          "As a user I'd to see many different objects"                          | The game contains 4 categories and 5 objects in each category. Adding more objects to the game has been made easy by using arrays |
-| 3   |               "I'd Like to get a challenge and really test my guessing abilites"                |                 With the random multiplier being added to the lowest weight target it makes for a much more complex guessing game |
+|     |                            User story                            |                                                                                                                                                                                         Answer to user story |
+| --- | :--------------------------------------------------------------: | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| 1   |         "As a user interested in creating a funny story"         |                                                                                                          The game allows for the player to input any words they like after they've chosen their story branch |
+| 2   | " As a user I'd like to see many different stories and outcomes" |                                                          The game features 3 branches at the start, and 2 branches in the end, and allows the player to choose freely from the branches and their own inputs |
+| 3   |   "I'd like to clearly know what I can't and what I can write"   | The game clearly states what stories can be picked from, if the input should be a letter or a number. Error messages states what the correct input must be. Normal messages states what branch you've picked |
 
 ## Bugs
 
 ### Known Bugs
 
-- If you're at minus 1 score and you have no score-star spans active the displayQuestion function will not display a new question untill you've answered correctly
-- If you have guessed correctly 30 times in a row and all score-star spans are being showned displasyQuestion will not show a new question untill you've hiden more of the spans
+- No known bugs
 
 ### Fixed Bugs
 
-- [Readme](https://github.com/PetterJohanssonTilia/project-2/commit/53aaa8ea9d0471906e0294f3e4e879772752509c) Readme couldn't display images when they were named with uppercase .JPG and.PNG
-- [UnhideScorestar](https://github.com/PetterJohanssonTilia/project-2/issues/3)
-  Hiding/showing random spans instead of the already hidden/shown ones
-- [Evenlistener not working](https://github.com/PetterJohanssonTilia/project-2/issues/4) Couldn't add eventlistener dynamically so instead created a new class to listen to at the start of the game
-- [Multiplier Value](https://github.com/PetterJohanssonTilia/project-2/commit/85259db2acb84c6aca227400fb41c601f4dd4a47) not defined before being used
+- [Not using stored inputs](https://github.com/PetterJohanssonTilia/Project-3/issues/1) After choosing the second branch the game didn't use the previously entered inputs
+- [Validation not working](https://github.com/PetterJohanssonTilia/Project-3/issues/2)
+  The validation didn't work if you input a number outside of the choices range
 
 ---
 
@@ -383,13 +281,14 @@ All links and anchors are working.
 ### Local Preparation
 
 **Requirements:**
--A webbrowser of your choice, Chrome being recommended
+
+- A terminal of your choice, VSCO recommended.
 
 ### Local Instructions
 
-1. Download a copy of the project repository [here](https://github.com/PetterJohanssonTilia/Project-2/archive/refs/heads/main.zip) and extract the zip file
-2. Open the index.html file in your browser, This file can be dragged and droped into your browser to open it.
-3. Enjoy the site!
+1. Download a copy of the project repository [here](https://github.com/PetterJohanssonTilia/Project-3/archive/refs/heads/main.zip) and extract the zip file
+2. Open the app.py in your terminal
+3. Enjoy the game!
 
 ## Github Deployment
 
@@ -403,7 +302,7 @@ All links and anchors are working.
 ### Github Instructions
 
 1. Log in to your GitHub account.
-   navigate to [https://github.com/PetterJohanssonTilia/Project-1-](https://github.com/PetterJohanssonTilia/Project-1-).
+   navigate to [https://github.com/PetterJohanssonTilia/Project-3](https://github.com/PetterJohanssonTilia/Project-3).
 1. You can set up your own repository and copy or clone it, or you fork the repository.
 1. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
 1. GitHub pages will update from the Main branch by default.
