@@ -56,10 +56,10 @@ def choose_location(choice): #call the location-story chosen by user input
         print("Invalid choice. Please select a number between 1 and 3.")    
 
 def choose_goodevil(choicegoodevil): #call the good/evil-story chosen by user input
-    if choice == 1:
-        story_good(inputs)
-    elif choice == 2:
-        story_evil(inputs)
+    if choicegoodevil == 1:
+        story_good(inputs) #Uses the previous inputs in the next story
+    elif choicegoodevil == 2:
+        story_evil(inputs) #Uses the previous inputs in the next story
     else:
         print("Invalid choice. Please select a number between 1 and 2.")    
 
