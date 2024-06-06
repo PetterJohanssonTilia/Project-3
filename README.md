@@ -12,12 +12,15 @@ The application is designed to be a branching type of madlibs game. The applicat
     - [User Stories](#user-stories)
 
 2.  <details open>
-      <summary><a href="#features">Features</a></summary>
       
-       <summary><a href="#data-model">Data Model</a></summary>
-      <summary><a href="#colors">Colors</a></summary>
-      <summary><a href="#validation">Validation</a></summary>
-      <summary><a href="#feauture-ideas">Feauture Ideas</a></summary>
+    <summary><a href="#features">Features</a></summary>
+
+    - [Flow-chart](#flow-chart)
+    - [DataModel](#data-model)
+    - [Validation](#validation)
+    - [Introduction](#introduction)
+    - [End-message](#end-message)
+    - [Feature-ideas](#feature-ideas)
 
 3.  <details open>
       <summary><a href="#technologies-used">Technologies Used</a></summary>
@@ -58,7 +61,7 @@ The application is designed to be a branching type of madlibs game. The applicat
       - [Local Instructions](#local-instructions)
       </details></li>
       <li><details>
-      <summary><a href="#github-deployment">Github Deployment</a></summary>
+      <summary><a href="#heroku-deployment">Heroku Deployment</a></summary>
       
       - [Github Preparation](#github-preparation)
       - [Github Instructions](#github-instructions)
@@ -75,9 +78,7 @@ The application is designed to be a branching type of madlibs game. The applicat
 
 ---
 
-# UX
-
-## Goals
+# Goals
 
 ### Visitor Goals
 
@@ -113,9 +114,9 @@ Madlib Python fills these needs by:
 
 ## Flow-chart
 
-picture of flowchart
+<img src="assets/project3chart.jpg" alt="flowchart">
 
-### Data Model
+## Data-Model
 
 The user inputs data in a dictionary called inputs
 The game later accesses those inputs to fill out the chosen story
@@ -126,11 +127,11 @@ use them to color the users input words
 The game uses a dictionary called word_list to describe to the player
 what type of words they should be entering
 
-### Validation
+## Validation
 
 The game uses the function validate_input to check if its a letter, or a number, and if the number entered is in the list of choices being given
 
-### Branches
+## Branches
 
 The game offers 3 different branches at the start
 
@@ -143,19 +144,17 @@ It then offers 2 more branches of
 -good
 -evil
 
-### introduction
+## Introduction
 
 A brief introduction on what the game is about and explaining
 how the users inputs changes the story and how there will be
 different branches
 
-### end-message
+## End-message
 
 a message in the end asking if the player wants to play again or quit the game
 
----
-
-# Feature-Ideas
+## Feature-ideas
 
 The introduction and end messages is to give the player a clear understanding of the game with as few words as possible
 
@@ -164,6 +163,8 @@ The Idea of the branching stories is to give the game more replayability
 The user inputs are colorised to clearly show the player what their attribution to the story was
 
 The validation helps to stop player confusion and from breaking the game
+
+---
 
 # Technologies Used
 
@@ -192,7 +193,10 @@ The validation helps to stop player confusion and from breaking the game
 
 ### Validation
 
-CI linter, in case you don't have link: https://pep8ci.herokuapp.com/,
+Python code tested with CI linter (https://pep8ci.herokuapp.com/)
+with no errors found
+
+<img src="assets/pythonlinter.jpg" alt="python linter">
 
 ### General Testing
 
@@ -202,9 +206,15 @@ CI linter, in case you don't have link: https://pep8ci.herokuapp.com/,
 
 ### Manual Testing
 
-table enter number letter
-
 - Testing done through playing the game
+
+|                         | input                | outcome                                       |
+| ----------------------- | -------------------- | --------------------------------------------- |
+| ask for letter          | letter               | Story continues                               |
+| ask for letter          | input number         | "Invalid input. Please enter a valid number." |
+| ask for specific number | input correct number | Story continues                               |
+| ask for specific number | input wrong number   | "Invalid input. Please enter a valid choice." |
+| ask for specific number | input letter         | "Invalid input. Please enter a valid number." |
 
 ### Mobile Testing
 
@@ -222,7 +232,7 @@ table enter number letter
 | --- | :----------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | 1   | "As a user interested in making my own stories I want to be able to influence the outcome" |                                                                                    The game features inputs from the players and show each word they played has written in color |
 | 2   |                     "As a user I'd like to see many different stories"                     | The game contains 3 locations each with their own story and later 2 more outcomes of becoming good or evil. These are clearly explained at the start and when the choices appear |
-| 3   |                        "I'd like for the game to not be confusing"                         |                 The game features good explinations but also validation, if the user inputs the wrong letters/numbers/choices the game states what was typed wrongly by the user |
+| 3   |                        "I'd like for the game to not be confusing"                         |             The game features good explanation but also validation, if the user inputs the wrong letters/numbers/choices the game states what it expects as an input by the user |
 
 ## Bugs
 
@@ -245,7 +255,7 @@ table enter number letter
 ### Local Preparation
 
 **Requirements:**
--A terminal of your choice, vscodee being recommended
+-A terminal of your choice, vscode being recommended
 
 ### Local Instructions
 
