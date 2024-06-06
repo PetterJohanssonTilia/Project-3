@@ -114,7 +114,7 @@ Madlib Python fills these needs by:
 
 ## Flow-chart
 
-<img src="assets/project3chart.jpg" alt="flowchart">
+<img src="assets/project3chart.JPG" alt="flowchart">
 
 ## Data-Model
 
@@ -129,7 +129,11 @@ what type of words they should be entering
 
 ## Validation
 
-The game uses the function validate_input to check if its a letter, or a number, and if the number entered is in the list of choices being given
+Each time the user sends an input the validator will check if it's a letter, or a number and if the number entered is in the list of choices being given
+
+The validation has been manually tested and can be seen here
+
+- [Manual Testing](#manual-testing)
 
 ## Branches
 
@@ -193,10 +197,10 @@ The validation helps to stop player confusion and from breaking the game
 
 ### Validation
 
-Python code tested with CI linter (https://pep8ci.herokuapp.com/)
+Python code validated with CI linter (https://pep8ci.herokuapp.com/)
 with no errors found
 
-<img src="assets/pythonlinter.jpg" alt="python linter">
+<img src="assets/pythonlinter.JPG" alt="python linter">
 
 ### General Testing
 
@@ -250,26 +254,47 @@ with no errors found
 
 # Deployment
 
+Heroku Deployment<br>
+This project uses Heroku, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+Deployment steps are as follows, after account setup on herokus website:
+
+- Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+- Select Automatic Deployment from the Heroku app.
+  Or:
+- In the Terminal/CLI, connect to Heroku using this command: heroku login -i
+- Set the remote for Heroku: heroku git:remote -a app_name
+- After performing the standard Git add, commit, and push to GitHub, you can now type:
+  - git push heroku main
+
+The project should now be connected and deployed to Heroku!
+
 ## Local Deployment
 
-### Local Preparation
+This project can be cloned or forked in order to make a local copy on your own system.
 
-**Requirements:**
--A terminal of your choice, vscode being recommended
+Cloning<br>
+You can clone the repository by following these steps:
 
-### Local Instructions
+- Go to the GitHub repository
+- Locate the Code button above the list of files and click it<br>
+- Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard<br>
+- Open Git shell or Terminal
+- Change the current working directory to the one where you want the cloned directory
+- In your IDE Terminal, type the following command to clone my repository:git clone https://github.com/PetterJohanssonTilia/Project-3.git<br>
+- Press Enter to create your local clone.
 
-1. Download a copy of the project repository [here](https://github.com/PetterJohanssonTilia/Project-3/archive/refs/heads/main.zip) and extract the zip file
-2. Open the run.py file in your terminal
-3. Enjoy the aplication!
+Forking<br>
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository. You can fork this repository by using the following steps:
 
-## Heroku Deployment
-
-### Heroku Instructions
-
-1. Log in to your Heroku account.
-   navigate to [madlibs-python](https://madlibs-python-b03353853cb1.herokuapp.com/).
-2. Enjoy the application!
+- Log in to GitHub and locate the GitHub Repository
+- At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+- Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 ## Credits and Contact
 
