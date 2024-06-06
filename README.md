@@ -215,7 +215,7 @@ with no errors found
 |                         | input                | outcome                                       |
 | ----------------------- | -------------------- | --------------------------------------------- |
 | ask for letter          | letter               | Story continues                               |
-| ask for letter          | input number         | "Invalid input. Please enter a valid number." |
+| ask for letter          | input number         | "Invalid input. Please enter a valid letter." |
 | ask for specific number | input correct number | Story continues                               |
 | ask for specific number | input wrong number   | "Invalid input. Please enter a valid choice." |
 | ask for specific number | input letter         | "Invalid input. Please enter a valid number." |
