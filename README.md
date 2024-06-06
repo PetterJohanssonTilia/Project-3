@@ -232,11 +232,11 @@ with no errors found
 
 ### Testing User Stories
 
-|     |                                         User story                                         |                                                                                                                                                             Answer to user story |
-| --- | :----------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 1   | "As a user interested in making my own stories I want to be able to influence the outcome" |                                                                                    The game features inputs from the players and show each word they played has written in color |
-| 2   |                     "As a user I'd like to see many different stories"                     | The game contains 3 locations each with their own story and later 2 more outcomes of becoming good or evil. These are clearly explained at the start and when the choices appear |
-| 3   |                        "I'd like for the game to not be confusing"                         |             The game features good explanation but also validation, if the user inputs the wrong letters/numbers/choices the game states what it expects as an input by the user |
+|     |                                         User story                                         |                                                                                                                                                                                                                        Answer to user story |
+| --- | :----------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| 1   | "As a user interested in making my own stories I want to be able to influence the outcome" |                                                                                                                 The game supports inputs from the players and shows each word the player entered in a unique color to give visual feed-back |
+| 2   |                     "As a user I'd like to see many different stories"                     | The game features 3 branching stories in the start, called locations. Later 2 more branches appear called good or evil. The branching story is clearly explained at the start and is explained when the choices appear and has been entered |
+| 3   |                        "I'd like for the game to not be confusing"                         |                The game features a good introduction explaining the game but also a validation function, if the user inputs the wrong letters/numbers/choices the game states what it expects as an input by the user to stop any confusion |
 
 ## Bugs
 
